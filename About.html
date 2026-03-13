@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Rafizul Islam Rahat</title>
+    <link rel="stylesheet" href="about.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="about-page">
+
+    <header class="header">
+        <a href="index.html" class="logo"></a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="blogs.html">Blogs</a>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <div class="user-identity">
+            <h1 class="rahul-name">Rafijul Islam Rahat</h1>
+            <div class="name-border"></div>
+            <p class="user-tagline">Student at Pabna University of Science and Technology</p>
+        </div>
+
+        <div class="about-container">
+            <div class="about-img">
+                <img src="about-profile.png" alt="Profile Image">
+            </div>
+   
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <p>Welcome to my little corner of the Internet! I'm I am currently studying at<strong> Pabna University of Science and Technology (PUST)</strong>.
+                    I was born and raised in Jhenaidah district of Khulna division of Bangladesh. Since childhood, I have been very interested in data technology 
+                    and digital creativity. So, in addition to my formal education, I have learned Python, Excel, Spss, R, power BI, SQL for data analysis
+                     and am working as a freelancer with various professional individuals and organizations.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Data Visualization</span><br>Microsoft Power BI, and Excel</li>
+                        <li><span>Data Management and Cleaning</span><br>Excel, SQL Power Query and Spss</li>
+                        <li><span>Coding Skills</span><br>Python, HTML/CSS, R, Javascript</li>
+                         <li><a href="cv.pdf" class="btn" download><h2>Download CV</h2></a></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024 - Present</span><br>e-Sport Data Analysis</li>
+                        <li><span>2025 - Present</span><br>e-Sport Web Scraping </li>
+                       <a href="cv.pdf" class="btn" download><h2>Download CV<h2></p2></a>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                         <li><span>Certificate</span></li>
+                       <li>Google data analytics certificate</li><br>
+                        <li><span>2024 - Present</span><br>Bachelor of Social Science (BSS)</li>
+                        <li>Pabna University of Science and Technology (PUST)</li>
+                       <li> Session:2023 -24 </li><br>
+                      
+                        <li><span>2021 - 2022</span><br> Higher Secondary Certificate (HSC)</li>
+                        <li>Shailkupa Goverment Collage</li>
+                        <li>Passing Year:2023</li>
+                         <li>GPA:5.00</li>
+                         <li><span>2019 - 2020</span><br> Secondary School Certificate (SSC)</li>
+                         <li>Shailkupa Govtment Pilot High School</li>
+                         <li>passing Year: 2021</li>
+                         <li> GPA:5.00</li>
+                          <li><a href="cv.pdf" class="btn" download><h2>Download CV</h2></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function opentab(tabname){
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            
+            for(let tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(let tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>

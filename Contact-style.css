@@ -1,0 +1,175 @@
+/* মেইন কালার ভেরিয়েবল */
+:root {
+    --bg-color: #081b29;
+    --main-color: #00acf0;
+    --text-color: #ededed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* হেডার ও মেনুবার (ডানপাশে) */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 9%;
+    background: rgba(8, 27, 41, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--main-color);
+}
+
+/* মেইন সেকশন */
+.contact {
+    padding: 110px 9% 50px;
+}
+
+/* নামের স্টাইল ও বর্ডার */
+.user-identity {
+    margin-bottom: 40px;
+}
+
+.rahul-name {
+    font-size: clamp(28px, 5vw, 42px);
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.name-border {
+    width: 100%;
+    height: 3px;
+    background: var(--main-color);
+    margin: 10px 0 15px;
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.user-tagline {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* কন্টাক্ট লেআউট (Responsive Flexbox) */
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-left { flex: 1 1 350px; }
+.contact-right { flex: 1 1 450px; }
+
+.heading { font-size: 40px; margin-bottom: 20px; }
+.heading span { color: var(--main-color); }
+
+.contact-info p {
+    font-size: 18px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p i {
+    color: var(--main-color);
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    margin: 30px 15px 30px 0;
+    transition: .5s;
+}
+
+.social-icons a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+/* বাটন স্টাইল */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--main-color);
+    border-radius: 6px;
+    font-size: 16px;
+    color: var(--bg-color);
+    font-weight: 600;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+/* ফর্ম ডিজাইন */
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #112e42; /* ব্যাকগ্রাউন্ডের সাথে ম্যাচিং ডার্ক শেড */
+    color: var(--text-color);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--main-color);
+}
+
+/* মোবাইল ও ট্যাবের জন্য রেসপনসিভ মিডিয়া কুয়েরি */
+@media (max-width: 991px) {
+    .header { padding: 20px 5%; }
+    .contact { padding: 100px 5% 30px; }
+}
+
+@media (max-width: 768px) {
+    .navbar { display: none; } /* মোবাইলে মেনু হাইড (আপনি চাইলে হামবার্গার মেনু যোগ করতে পারেন) */
+    .contact-box { flex-direction: column; }
+    .heading { font-size: 30px; }
+}
